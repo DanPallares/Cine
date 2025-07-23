@@ -1,5 +1,11 @@
 let peliculas = [
     {
+        id: 5,
+        titulo: "Denominación de Origen",
+        imagen: "assets/img/denominacion_origen.jpg",
+        descripcion: "La batalla por la verdadera longaniza desata un movimiento social."
+    },
+    {
         id: 1,
         titulo: "Volver al Futuro",
         imagen: "assets/img/back_to_the_future.jpg",
@@ -23,10 +29,18 @@ let peliculas = [
         imagen: "assets/img/midsommar.jpg",
         descripcion: "Un ritual de primavera muy perturbador en Suecia"
     },
-    
+
+
+    {
+        id: 6,
+        titulo: "La Sustancia",
+        imagen: "assets/img/the_substance.jpg",
+        descripcion: "La promesa de la juventud eterna se convierte en una pesadilla.",
+    }
+
 ]
 
-$(document).ready(function() {
+$(document).ready(function () {
     let contenedor = $("#contenedor-peliculas")
 
     for (let i = 0; i < peliculas.length; i++) {
@@ -35,10 +49,12 @@ $(document).ready(function() {
             <div class="col-md-4 mb-5">
                 <div class="card">
                     <img src="${pelicula.imagen}" alt="" class="card-img-top">
-                    <div class="card-body">
+                    <div class="card-body text-center">
                         <h5 class="card-title">${pelicula.titulo}</h5>
                         <p class="card-text">${pelicula.descripcion}</p>
-                        <button data-id="${pelicula.id}" class="btn btn-primary mt-5 botonReserva" data-bs-toggle="modal" data-bs-target="#modalReserva">Reservar</button>
+                        <div class="text-center">
+                        <button data-id="${pelicula.id}" class="btn btn-primary mt-5 botonReserva" data-bs-toggle="modal" data-bs-target="#modalReserva">Reservar entrada(s)</button>
+                        </div>    
                     </div>
                 </div>
             </div>
@@ -48,7 +64,7 @@ $(document).ready(function() {
 
     let peliculaSeleccionada = null
 
-    $(document).on("click", ".botonReserva", function() {
+    $(document).on("click", ".botonReserva", function () {
         let id = parseInt($(this).data("id"));
         for (i = 0; i < peliculas.length; i++) {
             if (peliculas[i].id === id) {
@@ -60,7 +76,7 @@ $(document).ready(function() {
         $("#reservarPelicula").text(peliculaSeleccionada.titulo)
     })
 
-    $("#confirmarReserva").on("click", function() {
+    $("#confirmarReserva").on("click", function () {
         let hora = $("#hora").val()
         let asiento = $("#asiento").val()
         let nombre = $("#nombre").val()
@@ -90,12 +106,12 @@ $(document).ready(function() {
         $("#confirmarHora").text(hora)
         $("#confirmarAsiento").text(asiento)
         $("#confirmacion").slideDown()
-        
+
 
         const modal = bootstrap.Modal.getInstance(document.getElementById("modalReserva"))
         modal.hide()
 
-        $('html, body').animate({scrollTop: $('#confirmacion').offset().top}, 500) 
+        $('html, body').animate({ scrollTop: $('#confirmacion').offset().top }, 500)
     })
 
 
