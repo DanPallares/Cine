@@ -15,8 +15,7 @@ body {
 }
 
 .card button:hover {
-  background-color: #a81e2a
-  color: white;
+  background-color: #a81e2a;
 }
 
 .card-title {
