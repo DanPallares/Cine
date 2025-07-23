@@ -27,7 +27,7 @@ let peliculas = [
         id: 4,
         titulo: "Midsommar",
         imagen: "assets/img/midsommar.jpg",
-        descripcion: "Un ritual de primavera muy perturbador en Suecia"
+        descripcion: "Un ritual de primavera muy perturbador en Suecia."
     },
 
 
@@ -46,14 +46,15 @@ $(document).ready(function () {
     for (let i = 0; i < peliculas.length; i++) {
         let pelicula = peliculas[i];
         let card = `
-<div class="col-md-4 mb-5">
-    <div class="card border-0 shadow-lg h-100">
-    <img src="${pelicula.imagen}" alt="${pelicula.titulo}" class="card-img-top" style="height: 480px; object-fit: cover;">
-    <div class="card-body d-flex flex-column justify-content-between text-center">
-    <div>
-        <h5 class="card-title mb-3">${pelicula.titulo}</h5>
-        <p class="card-text">${pelicula.descripcion}</p>
-    </div>
+
+    <div class="col-md-4 mb-5">
+        <div class="card border-0 shadow-lg h-100 rounded">
+            <img src="${pelicula.imagen}" alt="${pelicula.titulo}" class="card-img-top" style="height: 480px; object-fit: cover;">
+                <div class="card-body d-flex flex-column justify-content-between text-center">
+            <div>
+            <h5 class="card-title mb-3">${pelicula.titulo}</h5>
+            <p class="card-text">${pelicula.descripcion}</p>
+        </div>
     <button 
         data-id="${pelicula.id}" 
         class="btn btn-primary mt-4 botonReserva" 

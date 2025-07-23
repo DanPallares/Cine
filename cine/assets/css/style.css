@@ -1,4 +1,53 @@
-.card-img-top {
-    height: 300px;
-    object-fit: contain;
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #1a1a1a;
 }
+
+.card {
+    background-color: #f8edb0;
+}
+
+.card button {
+    background-color: #CB2733;
+    color: white;
+    font-weight: 500;
+    
+}
+
+.card button:hover {
+  background-color: #a81e2a
+  color: white;
+}
+
+.card-title {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+}
+
+
+header {
+    display: flex;
+    align-items: center;
+    background-image: url('../img/fondo02.jpg');
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+
+header h1 {
+    font-family: "Poppins", sans-serif;
+    font-size: 2.7rem;
+    font-weight: 800;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.9);
+}
+
+header p {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: 400;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.9);
+}
+
