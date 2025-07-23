@@ -3,19 +3,19 @@ let peliculas = [
         id: 1,
         titulo: "Volver al Futuro",
         imagen: "assets/img/back_to_the_future.jpg",
-        descripcion: "Eres un gallina McFly"
+        descripcion: "El profesor Doc Brown y Marty McFly viajan al pasado para salvar el futuro.",
     },
     {
         id: 2,
         titulo: "El Joven Manos de Tijera",
         imagen: "assets/img/edward_scissorhands.jpg",
-        descripcion: "Un joven emo descrubre que tiene manos de tijera",
+        descripcion: "Un joven con manos de tijera que busca su lugar en el mundo.",
     },
     {
         id: 3,
         titulo: "Jurassic Park",
         imagen: "assets/img/jurassic_park.webp",
-        descripcion: "Raaawwwrrr"
+        descripcion: "Dinosaurios en la era moderna, ¿qué podría salir mal?"
     },
     {
         id: 4,
