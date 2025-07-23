@@ -46,18 +46,26 @@ $(document).ready(function () {
     for (let i = 0; i < peliculas.length; i++) {
         let pelicula = peliculas[i];
         let card = `
-            <div class="col-md-4 mb-5">
-                <div class="card">
-                    <img src="${pelicula.imagen}" alt="" class="card-img-top">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">${pelicula.titulo}</h5>
-                        <p class="card-text">${pelicula.descripcion}</p>
-                        <div class="text-center">
-                        <button data-id="${pelicula.id}" class="btn btn-primary mt-5 botonReserva" data-bs-toggle="modal" data-bs-target="#modalReserva">Reservar entrada(s)</button>
-                        </div>    
-                    </div>
-                </div>
-            </div>
+<div class="col-md-4 mb-5">
+    <div class="card border-0 shadow-lg h-100">
+    <img src="${pelicula.imagen}" alt="${pelicula.titulo}" class="card-img-top" style="height: 480px; object-fit: cover;">
+    <div class="card-body d-flex flex-column justify-content-between text-center">
+    <div>
+        <h5 class="card-title mb-3">${pelicula.titulo}</h5>
+        <p class="card-text">${pelicula.descripcion}</p>
+    </div>
+    <button 
+        data-id="${pelicula.id}" 
+        class="btn btn-primary mt-4 botonReserva" 
+        data-bs-toggle="modal" 
+        data-bs-target="#modalReserva">
+        Reservar entrada(s)
+    </button>
+    </div>
+    </div>
+</div>
+
+
         `;
         contenedor.append(card);
     }
