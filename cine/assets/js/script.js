@@ -1,21 +1,27 @@
 let peliculas = [
     {
         id: 1,
-        titulo: "Star Wars: Una Nueva Esperanza",
-        imagen: "https://upload.wikimedia.org/wikipedia/en/8/87/StarWarsMoviePoster1977.jpg",
-        descripcion: "El inicio de la mejor saga de la historia... En una galaxia muy muy lejana"
+        titulo: "Volver al Futuro",
+        imagen: "assets/img/back_to_the_future.jpg",
+        descripcion: "Eres un gallina McFly"
     },
     {
         id: 2,
-        titulo: "Harry Potter y la Piedra Filosofal",
-        imagen: "https://upload.wikimedia.org/wikipedia/en/7/7a/Harry_Potter_and_the_Philosopher%27s_Stone_banner.jpg",
-        descripcion: "Un jóven descrubre que es mago y se une Hogwarts",
+        titulo: "El Joven Manos de Tijera",
+        imagen: "assets/img/edward_scissorhands.jpg",
+        descripcion: "Un joven emo descrubre que tiene manos de tijera",
     },
     {
         id: 3,
-        titulo: "La Guía del Viajero Intergaláctico",
-        imagen: "https://upload.wikimedia.org/wikipedia/en/b/bd/H2G2_UK_front_cover.jpg",
-        descripcion: "Una comedia galáctica absurda"
+        titulo: "Jurassic Park",
+        imagen: "assets/img/jurassic_park.webp",
+        descripcion: "Raaawwwrrr"
+    },
+    {
+        id: 4,
+        titulo: "Midsommar",
+        imagen: "assets/img/midsommar.jpg",
+        descripcion: "Eres un gallina McFly"
     },
     
 ]
@@ -57,6 +63,7 @@ $(document).ready(function() {
     $("#confirmarReserva").on("click", function() {
         let hora = $("#hora").val()
         let asiento = $("#asiento").val()
+
 
         if (!asiento) {
             alert("Por favor, selecciona un asiento!")
