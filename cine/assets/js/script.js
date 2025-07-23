@@ -21,7 +21,7 @@ let peliculas = [
         id: 4,
         titulo: "Midsommar",
         imagen: "assets/img/midsommar.jpg",
-        descripcion: "Eres un gallina McFly"
+        descripcion: "Un ritual de primavera muy perturbador en Suecia"
     },
     
 ]
@@ -63,20 +63,39 @@ $(document).ready(function() {
     $("#confirmarReserva").on("click", function() {
         let hora = $("#hora").val()
         let asiento = $("#asiento").val()
-
+        let nombre = $("#nombre").val()
+        let apellido = $("#apellido").val()
+        let numeroTarjeta = $("#numero-tarjeta").val()
+        let cvv = $("#cvv").val()
+        let expiryDate = $("#expiryDate").val()
 
         if (!asiento) {
             alert("Por favor, selecciona un asiento!")
             return
         }
 
+        if (!nombre || !apellido) {
+            alert("Por favor, ingrese su nombre y apellido")
+            return
+        }
+
+        if (!numeroTarjeta || !cvv || !expiryDate) {
+            alert("Por favor, ingresa todos los datos de tu tarjeta de crédito/débito")
+            return
+        }
+
+
+
         $("#confirmarPelicula").text(peliculaSeleccionada.titulo)
         $("#confirmarHora").text(hora)
         $("#confirmarAsiento").text(asiento)
         $("#confirmacion").slideDown()
+        
 
         const modal = bootstrap.Modal.getInstance(document.getElementById("modalReserva"))
         modal.hide()
+
+        $('html, body').animate({scrollTop: $('#confirmacion').offset().top}, 500) 
     })
 
 
